@@ -1,4 +1,4 @@
-# This is end to end deep learning project
+# This is end to end image classification deployment project
 
 ## 1. Creating the structure for the project
 - Creating the folder and files including:
@@ -16,7 +16,7 @@
 1. Setting up custom log
 2. Adding all the common function in utils
 
-### THE PROCEDURE OF PROJECT CONTAINS:
+#### THE PROCEDURE OF PROJECT CONTAINS:
 - DATA INGESTION
 - PREPARE BASE MODEL
 - PREPARE CALLBACKS
@@ -42,7 +42,8 @@
 - Create an .html file in an templates folder
 
 ## 7. CICD project deployment on AWS/Azure
-Apply EC2 and ECR
+### Apply EC2 and ECR
+
 The steps to deploy:
 
 - 7.1. Create IAM user
@@ -54,7 +55,7 @@ Apply 2 policies:
 
 - 7.3. Create EC2
 
-- 7.4. Install docker in EC2 Machine:
+- 7.4. Install docker in EC2:
 1. sudo apt-get update -y
 2. sudo apt-get upgrade
 3. curl -fsSL https://get.docker.com -o get-docker.sh

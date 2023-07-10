@@ -1,6 +1,6 @@
 from TomatoDiseases.constant import *
 from TomatoDiseases.utils.common import read_yaml, create_directories
-from TomatoDiseases.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig
+from TomatoDiseases.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig, PrepareCallbacksConfig
 
 class ConfigManager:
     def __init__(self,
@@ -41,3 +41,17 @@ class ConfigManager:
         )
         
         return prepare_base_model_config
+    
+    def get_callbacks_config(self) -> PrepareCallbacksConfig:
+        config = self.config.prepare_callbacks
+        checkpoint_dir = os.path.dirname(config.checkpoint_filepath)
+        create_directories([Path(checkpoint_dir),
+                            Path(config.tensorboard_dir)])
+        
+        prepare_callbacks_config = PrepareCallbacksConfig(
+            root_dir= config.root_dir,
+            tensorboard_dir= config.tensorboard_dir,
+            checkpoint_filepath= config.checkpoint_filepath
+        )
+        
+        return prepare_callbacks_config
