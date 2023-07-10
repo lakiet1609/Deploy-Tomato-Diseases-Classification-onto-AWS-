@@ -1,22 +1,22 @@
-## This is end to end deep learning project
+# This is end to end deep learning project
 
-# 1. Creating the structure for the project
+## 1. Creating the structure for the project
 - Creating the folder and files including:
 1. requirements.txt, setup.py ...
 2. src (source): components, pipeline, entity, config, constant, utils, ...
 3. research(ipynb): the testing code phase
 4. .yaml files (config, params, dvc ...)
 
-# 2. Set up environments and requirements installation
+## 2. Set up environments and requirements installation
 1. Updating setup.py
 2. Updating requirements.txt
 3. Building virtual environments
 
-# 3. Logger, exception and utils
+## 3. Logger, exception and utils
 1. Setting up custom log
 2. Adding all the common function in utils
 
-# THE PROCEDURE OF PROJECT CONTAINS:
+### THE PROCEDURE OF PROJECT CONTAINS:
 - DATA INGESTION
 - PREPARE BASE MODEL
 - PREPARE CALLBACKS
@@ -24,7 +24,7 @@
 - MODEL EVALUATION
 - PREDICTION
 
-# 4 Proceed the workflow repeatedly for each part
+## 4 Proceed the workflow repeatedly for each part
 1. Update config.yaml
 2. Update params.yaml 
 - After 2 steps at first time we did, updating the constant file !!!
@@ -35,13 +35,13 @@
 7. update the main.py
 8. update the dvc.yaml
 
-# 5. Apply DVC to track the pipeline
+## 5. Apply DVC to track the pipeline
 - DVC file includes all stages of the pipelines. Each stage contains: cmd, dependencies, outputs
 
-# 6. Create an web application using API (Flask)
+## 6. Create an web application using API (Flask)
 - Create an .html file in an templates folder
 
-# 7. CICD project deployment on AWS/Azure
+## 7. CICD project deployment on AWS/Azure
 Apply EC2 and ECR
 The steps to deploy:
 
