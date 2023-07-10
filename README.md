@@ -18,7 +18,11 @@
 
 # THE PROCEDURE OF PROJECT CONTAINS:
 - DATA INGESTION
-- BASE MODEL
+- PREPARE BASE MODEL
+- PREPARE CALLBACKS
+- MODEL TRAINER
+- MODEL EVALUATION
+- PREDICTION
 
 # 4 Proceed the workflow repeatedly for each part
 1. Update config.yaml
@@ -30,4 +34,44 @@
 6. update the pipeline
 7. update the main.py
 8. update the dvc.yaml
+
+# 5. Apply DVC to track the pipeline
+- DVC file includes all stages of the pipelines. Each stage contains: cmd, dependencies, outputs
+
+# 6. Create an web application using API (Flask)
+- Create an .html file in an templates folder
+
+# 7. CICD project deployment on AWS/Azure
+Apply EC2 and ECR
+The steps to deploy:
+
+- 7.1. Create IAM user
+Apply 2 policies: 
+1. AmazonEC2ContainerRegistryFullAccess
+2. AmazonEC2FullAccess
+
+- 7.2. Create ECR repo
+
+- 7.3. Create EC2
+
+- 7.4. Install docker in EC2 Machine:
+1. sudo apt-get update -y
+2. sudo apt-get upgrade
+3. curl -fsSL https://get.docker.com -o get-docker.sh
+4. sudo sh get-docker.sh
+5. sudo usermod -aG docker ubuntu
+6. newgrp docker
+
+- 7.5. Config EC2
+
+- 7.6. Secrets key in github
+1. AWS_ACCESS_KEY_ID
+2. AWS_SECRET_ACCESS_KEY
+3. AWS_REGION 
+4. AWS_ECR_LOGIN_URI 
+5. ECR_REPOSITORY_NAME 
+
+
+
+
 
