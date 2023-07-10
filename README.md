@@ -16,6 +16,10 @@
 1. Setting up custom log
 2. Adding all the common function in utils
 
+# THE PROCEDURE OF PROJECT CONTAINS:
+- DATA INGESTION
+- BASE MODEL
+
 # 4 Proceed the workflow repeatedly for each part
 1. Update config.yaml
 2. Update params.yaml 
