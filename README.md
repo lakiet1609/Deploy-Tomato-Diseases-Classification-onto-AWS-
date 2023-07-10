@@ -13,3 +13,17 @@
 3. Building virtual environments
 
 # 3. Logger, exception and utils
+1. Setting up custom log
+2. Adding all the common function in utils
+
+# 4 Proceed the workflow repeatedly for each part
+1. Update config.yaml
+2. Update params.yaml 
+- After 2 steps at first time we did, updating the constant file !!!
+3. Update the entity
+4. Update the configuration in config
+5. update the components
+6. update the pipeline
+7. update the main.py
+8. update the dvc.yaml
+
