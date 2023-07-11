@@ -37,7 +37,7 @@ class PrepareBaseModel:
         full_model.compile(
             optimizer= tf.keras.optimizers.Adam(learning_rate=learning_rate),
             loss = tf.keras.losses.CategoricalCrossentropy(),
-            metrics = ['recall']
+            metrics = [tf.keras.metrics.Recall()]
         )
         
         full_model.summary()
