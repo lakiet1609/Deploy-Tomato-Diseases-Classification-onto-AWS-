@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import os
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from TomatoDiseases.utils.common import decodeImage
 from TomatoDiseases.pipeline.predict import PredictionPipeline
 
@@ -16,18 +16,15 @@ class ClientApp:
         self.classifier = PredictionPipeline(self.filename)
 
 @app.route('/', methods = ['GET'])
-@cross_origin
 def home():
     return render_template('index.html')
 
 @app.route('/train', methods = ['GET', 'POST'])
-@cross_origin
 def training_route():
-    os.system('python main.py')
+    os.system('dvc repro')
     return 'Training done successfully'
 
-@app.route('/predict', methods = ['GET', 'POST'])
-@cross_origin
+@app.route('/predict', methods = ['POST'])
 def predicting_route():
     image = request.json['image']
     decodeImage(image, clApp.filename)
@@ -36,5 +33,5 @@ def predicting_route():
 
 if __name__ == '__main__':
     clApp = ClientApp()
-    app.run(host='0.0.0.0',  port=8080)
+    app.run(host='0.0.0.0', port=8080)
 

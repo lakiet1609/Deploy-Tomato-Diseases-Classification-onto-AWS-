@@ -10,10 +10,10 @@ class PredictionPipeline:
         self.filename = filename
     
     def predict(self):
-        model = load_model(r'artifacts\training\model.h5')
+        model = load_model(os.path.join('artifacts', 'training', 'model.h5'))
         image = img_to_array(load_img(self.filename, target_size=(224,224)))
         image = np.expand_dims(image, axis=0)
-        class_names = os.listdir(r'artifacts\data_ingestion\tomato')
+        class_names = os.listdir(os.path.join('artifacts', 'training', 'model.h5'))
         result = np.argmax(model.predict(image), axis=1)
         prediction = class_names[result[0]]
         return [{'image': prediction}]
