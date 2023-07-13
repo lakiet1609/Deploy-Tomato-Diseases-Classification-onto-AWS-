@@ -24,7 +24,7 @@ def training_route():
     os.system('dvc repro')
     return 'Training done successfully'
 
-@app.route('/predict', methods = ['POST'])
+@app.route('/predict', methods = ['GET','POST'])
 def predicting_route():
     image = request.json['image']
     decodeImage(image, clApp.filename)
