@@ -35,7 +35,7 @@ except Exception as e:
     raise
 
 
-stage_name = 'Training model stage'
+stage_name = 'Evaluating model stage'
 try:
     logger.info(f'{stage_name} started')
     obj = ModelEvaluationPipeline()
