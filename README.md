@@ -51,7 +51,7 @@ Apply 2 policies:
 1. AmazonEC2ContainerRegistryFullAccess
 2. AmazonEC2FullAccess
 
-- 7.2. Create ECR repo
+- 7.2. Create ECR repo: 110899433956.dkr.ecr.ap-southeast-2.amazonaws.com/tomato
 
 - 7.3. Create EC2
 
